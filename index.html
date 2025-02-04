@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?romantic,couple') no-repeat center center/cover;
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            width: 500px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 2.5em;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            font-size: 1.2em;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            width: 100%;
+        }
+        .yes {
+            background-color: #ff4081;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #e91e63;
+        }
+        .absolutely {
+            background-color: #ff9800;
+            color: white;
+        }
+        .absolutely:hover {
+            background-color: #f57c00;
+        }
+        .gallery {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        @media (min-width: 600px) {
+            .buttons {
+                flex-direction: row;
+            }
+            .btn {
+                width: auto;
+            }
+            .gallery img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+    <script>
+        function sendMessage() {
+            const instagramUsername = "https://www.instagram.com/mylovepikachu7?igsh=MTF5MDdubnFoZXRhMQ==";
+            const message = encodeURIComponent("Yes! I would love to Be Your's! 💍❤️");
+            window.location.href = `https://www.instagram.com/direct/inbox/?text=${message}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be Mine? 💍</h1>
+        <p>From the moment we met, I knew you were the one. My love for you grows every day, and I can't imagine my life without you.</p>
+        <div class="buttons">
+            <button class="btn yes" onclick="sendMessage()">Yes!</button>
+            <button class="btn absolutely" onclick="sendMessage()">Absolutely Yes! 💖</button>
+        </div>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Couple 1">
+            <img src="image2.jpg" alt="Couple 2">
+            <img src="image3.jpg" alt="Couple 3">
+        </div>
+    </div>
+</body>
+</html>
